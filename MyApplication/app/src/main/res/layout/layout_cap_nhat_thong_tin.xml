@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    tools:context=".CapNhatThongTinActivity">
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:layout_gravity="center_vertical"
+        android:layout_margin="30dp"
+        android:backgroundTint="@color/white"
+        android:background="@drawable/border">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvCatNhapThongTin"
+            android:layout_marginTop="30dp"
+            android:text="Cập nhật thông tin"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:textSize="30dp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"/>
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvCapNhatHoTen"
+            android:layout_below="@+id/tvCatNhapThongTin"
+            android:text="Họ tên"
+            android:layout_marginTop="30dp"
+            android:padding="6dp"
+            android:textSize="18dp"
+            android:textColor="#555555"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edCapNhatHoTen"
+            android:layout_below="@id/tvCapNhatHoTen"
+            android:background="@drawable/border"
+            android:inputType="textPersonName"
+            android:padding="6dp"
+            android:textSize="18dp"
+            android:hint="Nhập họ và tên"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvCapNhatSdt"
+            android:layout_below="@+id/edCapNhatHoTen"
+            android:text="Số điện thoại"
+            android:layout_marginTop="10dp"
+            android:padding="6dp"
+            android:textSize="18dp"
+            android:textColor="#555555"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edCapNhatSdt"
+            android:layout_below="@id/tvCapNhatSdt"
+            android:background="@drawable/border"
+            android:inputType="textPersonName"
+            android:padding="6dp"
+            android:textSize="18dp"
+            android:hint="Nhập số điện thoại"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnCapNhatThongTin"
+            android:layout_below="@id/edCapNhatSdt"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginLeft="50dp"
+            android:text="Cập nhật"/>
+        
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/progressBar"
+            android:background="@color/white"
+            android:elevation="10dp"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+</ScrollView>

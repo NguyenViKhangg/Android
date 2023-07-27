@@ -80,11 +80,12 @@ public class MainActivity extends AppCompatActivity {
             finish();
             overridePendingTransition(0, 0);
         } else if (id == R.id.menuTen) {
-//            Intent intent = new Intent(MainActivity.this, CapNhatThongTin.class);
-//            startActivity(intent );
+            Intent intent = new Intent(MainActivity.this, CapNhatThongTinActivity.class);
+            startActivity(intent );
         }
         else if (id == R.id.menuMail) {
-            Toast.makeText(this, "Mail", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(MainActivity.this, DoiEmailActivity.class);
+            startActivity(intent );
         }
         else if (id == R.id.menuMatKhau) {
 //            Intent intent = new Intent(MainActivity.this, DoiMatKhau.class);

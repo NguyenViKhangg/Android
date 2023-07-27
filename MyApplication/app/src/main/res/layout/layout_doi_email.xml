@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color"
+    tools:context=".DoiEmailActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:background="@drawable/border"
+            android:padding="15dp"
+            android:layout_margin="30dp"
+            android:id="@+id/rlDoiEmail1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvDoiEmailHead1"
+                android:layout_marginTop="20dp"
+                android:text="Vui lòng nhập email và mật khẩu để xác nhận tài khoản"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvDoiEmail"
+                android:layout_below="@id/tvDoiEmailHead1"
+                android:text="Email hiện tại:"
+                android:padding="6dp"
+                android:layout_marginTop="30dp"
+                android:textSize="18dp"
+                android:textColor="#555555"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edDoiEmail_EmailHienTai"
+                android:layout_below="@+id/tvDoiEmail"
+                android:background="@drawable/border"
+                android:hint="Nhập email hiện tại"
+                android:padding="6dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvDoiEMail_MatKhau"
+                android:layout_below="@id/edDoiEmail_EmailHienTai"
+                android:text="Mật khẩu:"
+                android:padding="6dp"
+                android:layout_marginTop="10dp"
+                android:textSize="18dp"
+                android:textColor="#555555"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edDoiEmail_MatKhau"
+                android:layout_below="@+id/tvDoiEMail_MatKhau"
+                android:background="@drawable/border"
+                android:hint="Nhập mật khẩu"
+                android:padding="6dp"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnDoiEmail_XacNhan"
+                android:layout_below="@id/edDoiEmail_MatKhau"
+                android:text="Xác nhận"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:background="@drawable/border"
+            android:padding="15dp"
+           android:layout_marginRight="30dp"
+            android:layout_marginLeft="30dp"
+            android:layout_below="@+id/rlDoiEmail1">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvDoiEmailHead2"
+                android:layout_marginTop="10dp"
+                android:text="Vui lòng xác nhận tài khoản"
+                android:textSize="18dp"
+                android:textColor="#555555"
+                android:textAlignment="center"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvDoiEmail1"
+                android:layout_below="@id/tvDoiEmailHead2"
+                android:text="Email mới:"
+                android:padding="6dp"
+                android:layout_marginTop="20dp"
+                android:textSize="18dp"
+                android:textColor="#555555"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edDoiEmail_EmailMoi"
+                android:layout_below="@+id/tvDoiEmail1"
+                android:background="@drawable/border"
+                android:hint="Nhập email hiện tại"
+                android:padding="6dp"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnDoiEmail"
+                android:layout_below="@id/edDoiEmail_EmailMoi"
+                android:text="Đổi email"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"/>
+
+        </RelativeLayout>
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/progressBar"
+            android:background="@color/white"
+            android:elevation="10dp"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+</ScrollView>
