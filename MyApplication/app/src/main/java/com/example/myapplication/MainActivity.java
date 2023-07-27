@@ -88,8 +88,8 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent );
         }
         else if (id == R.id.menuMatKhau) {
-//            Intent intent = new Intent(MainActivity.this, DoiMatKhau.class);
-//            startActivity(intent);
+            Intent intent = new Intent(MainActivity.this, DoiMatKhauActivity.class);
+            startActivity(intent);
         }
         else if (id == R.id.menuDangXuat) {
             Toast.makeText(this, "Dang xuat", Toast.LENGTH_SHORT).show();

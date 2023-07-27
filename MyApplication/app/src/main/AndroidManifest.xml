@@ -13,6 +13,9 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
+            android:name=".DoiMatKhauActivity"
+            android:exported="false" />
+        <activity
             android:name=".DoiEmailActivity"
             android:exported="false" />
         <activity

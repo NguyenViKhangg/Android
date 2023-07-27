@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/bg_color"
-    tools:context=".DoiEmailActivity">
+    tools:context=".DoiMatKhauActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -33,29 +33,9 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/tvDoiEmail"
-                android:layout_below="@id/tvDoiEmailHead1"
-                android:text="Email hiện tại:"
-                android:padding="6dp"
-                android:layout_marginTop="30dp"
-                android:textSize="18dp"
-                android:textColor="#555555"/>
-
-            <EditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/edDoiEmail_EmailHienTai"
-                android:layout_below="@+id/tvDoiEmail"
-                android:background="@drawable/border"
-                android:hint="Nhập email hiện tại"
-                android:padding="6dp"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:id="@+id/tvDoiEMail_MatKhau"
-                android:layout_below="@id/edDoiEmail_EmailHienTai"
-                android:text="Mật khẩu:"
+                android:layout_below="@id/tvDoiEmailHead1"
+                android:text="Mật khẩu hiện tại:"
                 android:padding="6dp"
                 android:layout_marginTop="10dp"
                 android:textSize="18dp"
@@ -64,17 +44,17 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/edDoiEmail_MatKhau"
+                android:id="@+id/edDMK_MKHienTai"
                 android:layout_below="@+id/tvDoiEMail_MatKhau"
                 android:background="@drawable/border"
-                android:hint="Nhập mật khẩu"
+                android:hint="Nhập mật khẩu hiện tại"
                 android:padding="6dp"/>
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/btnDoiEmail_XacNhan"
-                android:layout_below="@id/edDoiEmail_MatKhau"
+                android:id="@+id/btnDMK_XacNhan"
+               android:layout_below="@id/edDMK_MKHienTai"
                 android:text="Xác nhận"
                 android:layout_marginTop="20dp"
                 android:layout_marginLeft="30dp"
@@ -87,7 +67,7 @@
             android:backgroundTint="@color/white"
             android:background="@drawable/border"
             android:padding="15dp"
-           android:layout_marginRight="30dp"
+            android:layout_marginRight="30dp"
             android:layout_marginLeft="30dp"
             android:layout_below="@+id/rlDoiEmail1">
 
@@ -106,7 +86,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/tvDoiEmail1"
                 android:layout_below="@id/tvDoiEmailHead2"
-                android:text="Email mới:"
+                android:text="Mật khẩu mới:"
                 android:padding="6dp"
                 android:layout_marginTop="20dp"
                 android:textSize="18dp"
@@ -115,18 +95,38 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/edDoiEmail_EmailMoi"
+                android:id="@+id/edDMK_MatKhauMoi"
                 android:layout_below="@+id/tvDoiEmail1"
                 android:background="@drawable/border"
-                android:hint="Nhập email mới"
+                android:hint="Nhập mật khẩu mơi"
+                android:padding="6dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvDMK_MatKhauMoi"
+                android:layout_below="@id/edDMK_MatKhauMoi"
+                android:text="Nhập lại mật khẩu:"
+                android:padding="6dp"
+                android:layout_marginTop="10dp"
+                android:textSize="18dp"
+                android:textColor="#555555"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edDMK_MatKhauNhapLai"
+                android:layout_below="@+id/tvDMK_MatKhauMoi"
+                android:background="@drawable/border"
+                android:hint="Nhập lại mật khẩu"
                 android:padding="6dp"/>
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/btnDoiEmail"
-                android:layout_below="@id/edDoiEmail_EmailMoi"
-                android:text="Đổi email"
+                android:id="@+id/btnDMK"
+                android:layout_below="@id/edDMK_MatKhauNhapLai"
+                android:text="Đổi Mật Khẩu"
                 android:layout_marginTop="20dp"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp"/>
