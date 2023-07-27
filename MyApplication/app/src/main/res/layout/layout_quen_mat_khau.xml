@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#8B3AB7"
+    tools:context=".QuenMatKhauActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:padding="15dp"
+        android:layout_gravity="center_vertical"
+        android:background="@color/white">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nhập email đăng ký để nhận link cập nhật lại mật khẩu"
+                android:layout_marginTop="30dp"
+                android:textAlignment="center"
+                android:textSize="25dp"
+                android:id="@+id/tvCatNhatMatKhau"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvCatNhatMatKhau"
+                android:id="@+id/tvEmail"
+                android:text="Email*"
+                android:textSize="20dp"
+                android:padding="10dp"
+                android:layout_marginTop="30dp"
+                android:textColor="#555555"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edQMKEmail"
+                android:layout_below="@id/tvEmail"
+                android:background="@drawable/border"
+                android:padding="10dp"
+                android:hint="Nhập email"
+                android:textSize="20dp"
+                android:inputType="textEmailAddress"/>
+
+            <Button
+                android:id="@+id/btnDangNhapQuenMK"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="50dp"
+                android:text="Xác Nhận"
+                android:textSize="18dp"
+                android:layout_below="@id/edQMKEmail"/>
+
+    </RelativeLayout>
+
+</ScrollView>

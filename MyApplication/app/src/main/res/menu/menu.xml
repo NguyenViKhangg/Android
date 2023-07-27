@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:title="Refresh"
+        android:icon="@drawable/refresh_24"
+        android:alphabeticShortcut="r"
+        android:orderInCategory="1"
+        app:showAsAction="ifRoom"
+        android:id="@+id/menuRefresh"/>
+
+    <item android:title="Cập nhật thông tin"
+        android:id="@+id/menuTen"/>
+
+    <item android:title="Cập nhật email"
+        android:id="@+id/menuMail"/>
+
+    <item android:title="Đổi mật khẩu"
+        android:id="@+id/menuMatKhau"/>
+
+    <item android:title="Đăng xuất"
+        android:id="@+id/menuDangXuat"/>
+</menu>

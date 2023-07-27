@@ -6,8 +6,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="#8B3AB7"
-    tools:context=".DangNhapActivity">
+    android:background="@color/bg_color"
+    tools:context=".DangKyActivity">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -27,17 +27,16 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="ĐĂNG NHẬP"
-                android:textColor="@color/black"
+                android:text="ĐĂNG KÝ"
                 android:textAlignment="center"
                 android:textStyle="bold"
+                android:textColor="@color/black"
                 android:textSize="36dp"/>
 
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:id="@+id/edDNEmail"
-                android:text="khang22319@gmail.com"
+                android:id="@+id/edDKEmail"
                 android:background="@drawable/border"
                 android:layout_marginTop="20dp"
                 android:paddingLeft="15dp"
@@ -46,30 +45,40 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:id="@+id/edDNMatKhau"
-                android:inputType="textPassword"
+                android:id="@+id/edDKMatKhau"
                 android:text="123456789"
+                android:inputType="textPassword"
                 android:background="@drawable/border"
                 android:layout_marginTop="20dp"
                 android:paddingLeft="15dp"
-                android:hint="Mat Khau"/>
+                android:hint="Mật khẩu"/>
 
-            <TextView
+            <EditText
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Quên mật khẩu ?"
-                android:layout_margin="15dp"
-                android:textSize="15dp"
-                android:textColor="@color/purple_700"
-                android:id="@+id/tvQuenMatKhau"
-                android:gravity="right"/>
+                android:layout_height="50dp"
+                android:id="@+id/edDKHoTen"
+                android:text="Nguyen Vi Khang"
+                android:background="@drawable/border"
+                android:layout_marginTop="20dp"
+                android:paddingLeft="15dp"
+                android:hint="Họ và tên"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/edDKSDT"
+                android:text="0373914272"
+                android:background="@drawable/border"
+                android:layout_marginTop="20dp"
+                android:paddingLeft="15dp"
+                android:hint="Số điện thoại"/>
 
             <Button
-                android:id="@+id/btnDangNhap"
+                android:id="@+id/btnDangKy"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:layout_marginTop="10dp"
-                android:text="Đăng nhập"
+                android:layout_marginTop="20dp"
+                android:text="Đăng Ký"
                 android:textSize="18dp"
                 app:cornerRadius="20dp" />
 
@@ -83,28 +92,26 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:textSize="18dp"
-                    android:text="Chưa có tài khoản ?"
+                    android:text="Đã có tài khoản ?"
                     android:layout_margin="5dp"
-                    android:textColor="@color/black"
+                    android:textStyle="bold"
                     android:layout_gravity="center"
                     android:layout_marginTop="10dp"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:id="@+id/tvDangKy"
+                    android:id="@+id/tvDangNhap"
                     android:layout_margin="5dp"
                     android:textSize="18dp"
-                    android:text="Đăng ký"
+                    android:text="Đăng nhập"
                     android:textStyle="bold"
                     android:textColor="@color/purple_700"
                     android:layout_gravity="center"
                     android:layout_marginTop="10dp"/>
 
             </LinearLayout>
-
         </LinearLayout>
-
     </androidx.cardview.widget.CardView>
 
 </LinearLayout>
