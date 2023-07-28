@@ -63,12 +63,10 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/llMail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:orientation="horizontal"
-            android:visibility="gone">
+            android:orientation="horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -86,8 +84,48 @@
                 android:textSize="18dp"
                 android:textColor="@color/black"
                 android:id="@+id/tvNDEmail"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:id="@+id/ivItem"
+                android:layout_height="wrap_content"
+                android:src="@drawable/circle_down_24"
+                android:layout_gravity="right"/>
         </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            android:background="@color/bg_color"
+            android:visibility="gone"
+            android:gravity="center"
+            android:id="@+id/llEx">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Text..."
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:id="@+id/tvEx"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="OK"
+                android:backgroundTint="@color/white"
+                android:textColor="@color/black"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:id="@+id/btnEx"/>
+
+        </LinearLayout>
     </LinearLayout>
+
+
+
 
 </androidx.cardview.widget.CardView>
