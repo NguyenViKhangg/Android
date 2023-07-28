@@ -79,7 +79,7 @@ public class DoiMatKhauActivity extends AppCompatActivity {
                                 binding.tvDoiEmailHead2.setText("Tài khoản đã được xác nhận. Bạn có thể đổi mật khẩu ngay bây giờ");
 
                                 Toast.makeText(DoiMatKhauActivity.this, "Xác nhận thành công", Toast.LENGTH_SHORT).show();
-                                
+
                                 binding.btnDMK.setOnClickListener(new View.OnClickListener() {
                                     @Override
                                     public void onClick(View view) {
