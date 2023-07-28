@@ -96,8 +96,8 @@ public class CapNhatThongTinActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 NguoiDungDTO nguoiDungDTO = snapshot.getValue(NguoiDungDTO.class);
                 if(nguoiDungDTO != null){
-                    binding.edCapNhatHoTen.setText(nguoiDungDTO.HoTen);
-                    binding.edCapNhatSdt.setText(nguoiDungDTO.SDT);
+                    binding.edCapNhatHoTen.setText(nguoiDungDTO.hoTen);
+                    binding.edCapNhatSdt.setText(nguoiDungDTO.sdt);
                 }else {
                     Toast.makeText(CapNhatThongTinActivity.this, "Lỗi !", Toast.LENGTH_SHORT).show();
                 }

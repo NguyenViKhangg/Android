@@ -2,6 +2,8 @@ package com.example.myapplication;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +11,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import com.example.myapplication.Adapter.NguoiDungAdapter;
 import com.example.myapplication.DTO.NguoiDungDTO;
 import com.example.myapplication.databinding.ActivityMainBinding;
 import com.google.firebase.auth.FirebaseAuth;
@@ -19,9 +22,16 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
     ActivityMainBinding binding;
     FirebaseAuth firebaseAuth;
+    // Khai bao hien thi danh sach
+    RecyclerView recyclerView;
+    DatabaseReference databaseReference;
+    NguoiDungAdapter nguoiDungAdapter;
+    ArrayList<NguoiDungDTO> nguoiDungList;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +47,32 @@ public class MainActivity extends AppCompatActivity {
        }else {
            funcHienThiThongTin(firebaseUser);
        }
+
+       // Hien thi danh sach
+        recyclerView = binding.rlDanhSach;
+        databaseReference = FirebaseDatabase.getInstance().getReference("NguoiDung");
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        nguoiDungList = new ArrayList<>();
+        nguoiDungAdapter = new NguoiDungAdapter(this, nguoiDungList);
+        recyclerView.setAdapter(nguoiDungAdapter);
+        databaseReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for (DataSnapshot dataSnapshot : snapshot.getChildren()){
+                    NguoiDungDTO nguoiDungDTO = dataSnapshot.getValue(NguoiDungDTO.class);
+                    nguoiDungList.add(nguoiDungDTO);
+                }
+                nguoiDungAdapter.notifyDataSetChanged();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Toast.makeText(MainActivity.this, "Lỗi hiển thị danh sách !", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        //
     }
 
     private void funcHienThiThongTin(FirebaseUser firebaseUser) {
@@ -47,8 +83,8 @@ public class MainActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 NguoiDungDTO nguoiDungDTO = snapshot.getValue(NguoiDungDTO.class);
                 if(nguoiDungDTO != null){
-                    String strHoTen = nguoiDungDTO.HoTen;
-                    String strSdt = nguoiDungDTO.SDT;
+                    String strHoTen = nguoiDungDTO.hoTen;
+                    String strSdt = nguoiDungDTO.sdt;
                     String strEmail = firebaseUser.getEmail();
 
                     binding.tvHoTen.setText(strHoTen);
